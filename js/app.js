@@ -14,7 +14,7 @@
     else if ((m = /^H (\S+) (.+)$/.exec(line))) AID.hint[m[1]] = m[2].trim(); }); }
   // içerik dosyalarındaki FX (ders formülü) ve HINT (soru ipucu) satırları
   UNITS.forEach(u => u.lessons.forEach(l => { if (l.fx.length) AID.fx[l.id] = (AID.fx[l.id] || []).concat(l.fx); l.qs.forEach(q => { if (q.hint && !AID.hint[q.id]) AID.hint[q.id] = q.hint; }); }));
-  const EXAM_W = { u1: 2, u2: 4, u3: 4, u4: 7, u5: 6, u6: 7, u7: 5, u8: 3, u9: 2 };
+  const EXAM_W = { u1: 2, u2: 4, u3: 4, u4: 6, u5: 4, u6: 6, u7: 6, u8: 6, u9: 2 };
   const SHORT = { u1: 'Böl. 1', u2: 'Böl. 2', u3: 'Böl. 3', u4: 'Böl. 4', u5: 'Böl. 5', u6: 'Böl. 6', u7: 'Böl. 7', u8: 'Böl. 12', u9: 'Economist' };
 
   /* ---------- durum ---------- */
@@ -243,7 +243,7 @@
     const ex = S.exams.slice().reverse();
     const wt = Object.entries(EXAM_W).map(([u, k]) => `<tr><td>${esc(UNIT[u].week)} · ${esc(UNIT[u].title)}</td><td class="num">${k}</td></tr>`).join('');
     return `<div class="view"><section class="hero"><div class="eyebrow">40 soru · test</div><h1>Deneme sınavı</h1>
-      <p>Bütün bölümlerden 40 çoktan seçmeli soru; ağırlık hesap içeren bölümlerde (4, 5, 6). Cevaplar sona kadar gösterilmez. Bitirince her sorunun çözümünü görürsün.</p>
+      <p>Bütün bölümlerden 40 çoktan seçmeli soru; dağılım slayt ağırlığına göre, en çok Bölüm 4, 6, 7 ve 12. Cevaplar sona kadar gösterilmez. Bitirince her sorunun çözümünü görürsün.</p>
       <div class="btnrow" style="margin-top:16px"><button class="btn" data-act="exam">${S.run ? 'Yarım kalan sınava dön' : 'Sınavı başlat'}</button></div></section>
       <div class="panel"><h3>Soru dağılımı</h3><div class="tbl"><table><thead><tr><th>Konu</th><th>Soru</th></tr></thead><tbody>${wt}</tbody></table></div>
       <p>Her denemede sorular değişir. Sayısal soruların yarısı her seferinde yeni sayılarla üretilir.</p></div>
