@@ -530,3 +530,37 @@ ol.steps, ul.steps { display: grid; gap: 8px; margin: 0; padding-left: 1.3em; co
   .q-split > .aids { grid-column: 2; grid-row: 1 / span 2; position: sticky; top: 0; max-height: calc(100dvh - 230px); overflow-y: auto; overscroll-behavior: contain; }
   .q-split > .ink-pad { grid-column: 1; }
 }
+
+/* şekiller (js/figs.js) */
+.fig { margin: 0; padding: 12px 12px 10px; background: var(--surface-2); border: 1px solid var(--line); border-radius: 12px; }
+.fig-art svg { display: block; width: 100%; height: auto; max-width: 600px; margin: 0 auto; overflow: visible; }
+.fig figcaption { margin-top: 8px; font-size: .8rem; line-height: 1.45; color: var(--ink-2); }
+.fig figcaption b { color: var(--ink); }
+.fig text { fill: var(--ink-2); font-family: var(--f-body); font-size: 14px; }
+.fig .tk { font-size: 12.5px; fill: var(--ink-3); font-family: var(--f-mono); }
+.fig .lb { font-size: 13px; fill: var(--ink-3); }
+.fig .lg { font-size: 13px; fill: var(--ink-2); }
+.fig .hd { font-weight: 700; fill: var(--ink); }
+.fig .tp { fill: var(--pen); font-weight: 700; } .fig .tb { fill: var(--bad); font-weight: 700; } .fig .tg { fill: var(--ok); font-weight: 700; }
+.fig .ax { stroke: var(--ink-3); stroke-width: 1.5; fill: none; } .fig .axh { fill: var(--ink-3); }
+.fig .ax0 { stroke: var(--ink-3); stroke-width: 1; stroke-dasharray: 3 3; }
+.fig .gr { stroke: var(--line); stroke-width: 1; }
+.fig .gd { stroke: var(--ink-3); stroke-width: 1.3; stroke-dasharray: 5 4; fill: none; }
+.fig .l1, .fig .l2, .fig .l3, .fig .l4, .fig .l5 { fill: none; stroke-width: 2.6; stroke-linejoin: round; stroke-linecap: round; }
+.fig .l1 { stroke: var(--pen); } .fig .l2 { stroke: var(--bad); } .fig .l3 { stroke: var(--ok); } .fig .l4 { stroke: var(--warn); } .fig .l5 { stroke: var(--ink-3); }
+.fig .thin { stroke-width: 1.6; } .fig .dsh { stroke-dasharray: 8 6; }
+.fig .bx { fill: var(--surface); stroke: var(--line); stroke-width: 1.5; }
+.fig .bxp { fill: var(--pen-soft); stroke: var(--pen); stroke-width: 1.5; }
+.fig .bxw { fill: var(--ok-soft); stroke: var(--ok); stroke-width: 1.5; }
+.fig .bxr { fill: var(--bad-soft); stroke: var(--bad); stroke-width: 1.5; }
+.fig .b0 { fill: var(--pen-soft); } .fig .b1 { fill: var(--pen); } .fig .b2 { fill: var(--bad); } .fig .b4 { fill: var(--warn); }
+.fig .shg { fill: var(--ok-soft); }
+.fig .ar, .fig .ar1, .fig .ar2, .fig .ar3 { stroke-width: 2; fill: none; }
+.fig .ar { stroke: var(--ink-2); } .fig .arh { fill: var(--ink-2); }
+.fig .ar1 { stroke: var(--pen); } .fig .ar1h { fill: var(--pen); }
+.fig .ar2 { stroke: var(--bad); } .fig .ar2h { fill: var(--bad); }
+.fig .ar3 { stroke: var(--ok); } .fig .ar3h { fill: var(--ok); }
+.fig .p1 { fill: var(--pen); opacity: .75; } .fig .p2 { fill: var(--bad); opacity: .75; }
+.fig .pt { fill: var(--surface); stroke: var(--ink); stroke-width: 2; }
+.fig .sh { fill: var(--warn); opacity: .14; }
+.fig .wd1 { fill: var(--pen-soft); stroke: var(--pen); stroke-width: 1.5; } .fig .wd2 { fill: var(--bad-soft); stroke: var(--bad); stroke-width: 1.5; }

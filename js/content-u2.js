@@ -31,6 +31,7 @@ Günlük dilde üçü karışır, iktisatta ayrıdır:
 ## CARD Likidite
 ==Likidite (liquidity)==: bir varlığın ödeme aracına ne kadar kolay çevrilebildiğinin ölçüsü. Paraya çevirmek ne kadar pahalıysa varlık o kadar az likittir.
 • Nakit: en likit. Vadesiz mevduat: çok likit. Ev: az likit (satmak aylar sürer, masraflı).
+@fig liq
 Finansal kurumlar iki çeşit likiditeden söz eder:
 | Tür | İngilizce | Anlamı |
 | Piyasa likiditesi | ==market liquidity== | varlığı satıp paraya çevirebilmek |
@@ -38,6 +39,7 @@ Finansal kurumlar iki çeşit likiditeden söz eder:
 :::dikkat 2007–2009 dersi
 Kriz öncesinde kurumlar uzun vadeli araçları kısa vadeli borçla finanse ediyor ve piyasaların hep likit kalacağını sanıyordu. 2007'de iki likidite birden kurudu ("çifte likidite şoku"); herkes nakit biriktirdi, kredi arzı düştü, likidite daha da azaldı. **Ders:** likidite çok değerlidir ve tam en çok gerektiği anda kaybolabilir.
 :::
+@fig spiral
 :::ipucu Banka kartı mı, kredi kartı mı?
 Banka kartı (debit card) çek gibidir ama hızlıdır: para hesabından **hemen** çıkar. Kredi kartı **ertelenmiş** ödemedir: zamanında ve tam öderseniz bir süreliğine faizsiz kredidir ve kredi geçmişi oluşturur; geç öderseniz gecikme ücreti, eksik öderseniz faiz doğar.
 :::
@@ -181,6 +183,7 @@ Bazıları altın standardına dönülmesini savunur (devlet çok para basar kor
 
 ## CARD Çekler ve elektronik ödemeler
 • ==Çek (check)==: bankana, hesabından para alıp başka bir hesaba aktarma talimatı. Nakit gibi **kesin ödeme değildir**; bir işlemler zinciri başlatır (Şekil 2.1: kâğıt çekin yolu). ABD'de hukuk iptal edilmiş çeki ödeme kanıtı saydığı ve ödeme sistemlerinde ==ağ etkisi (network effect)== olduğu için çek uzun süre baskın kaldı.
+@fig check
 • **Banka kartı (debit):** çek gibi çalışır, hesabından başka hesaba aktarım talimatıdır.
 • **Kredi kartı:** bankanın borç verme sözüdür; **para değildir**.
 • ==Elektronik fon transferi==: hesaptan hesaba doğrudan aktarım. En yaygını ==ACH (otomatik takas odası)== işlemleri: maaş, fatura gibi tekrarlayan ödemeler. Değeri çekleri geçti. Bankalar arası büyük transferler **Fedwire** ile yapılır.
@@ -320,7 +323,7 @@ Günlük değer değişimi −%22 ile +%32 arasında gidip geldi. Dolar, euro, y
 • ABD'nin resmî parası: değil.
 
 --- LESSON u2c | M | Parayı ölçmek: M1, M2, enflasyon
-FX: M1 :: nakit + seyahat çeki + vadesiz mevduat + diğer çekle çekilebilir mevduat
+FX: M1 :: nakit + vadesiz mevduat + diğer çekle çekilebilir mevduat
 FX: M2 = M1 + tasarruf (MMDA) + küçük vadeli mevduat + bireysel para piyasası fonu :: büyük vadeli mevduat dahil değil
 FX: $\pi = (\text{sepet}_{yeni} - \text{sepet}_{eski})/\text{sepet}_{eski}$ :: TÜFE enflasyonu
 FX: Enflasyonun temel nedeni :: çok fazla para
@@ -334,12 +337,24 @@ Para miktarındaki değişim **faizlerle, büyümeyle ve enflasyonla** ilişkili
 Parayı tanımlamak = likiditeyi tanımlamak (Şekil 2.2: likidite yelpazesi). Çizgiyi nereye çektiğine göre farklı ==para toplamları (monetary aggregates)== çıkar:
 • **M1:** en dar tanım, sadece en likit varlıklar.
 • **M2:** daha geniş, ödeme aracı olarak kullanılmayan ama kolayca paraya çevrilen varlıkları da içerir.
+@fig liq
 
 ## CARD M1 ve M2'nin içinde ne var? (Tablo 2.1)
 | Toplam | İçerik |
-| **M1** | dolaşımdaki nakit (halkın elindeki) + seyahat çekleri + vadesiz mevduat (demand deposits) + diğer çekle çekilebilir mevduat |
+| **M1** | dolaşımdaki nakit (halkın elindeki) + vadesiz mevduat (demand deposits) + diğer çekle çekilebilir mevduat |
 | **M2** | M1 + tasarruf mevduatı ve para piyasası mevduat hesapları (MMDA) + küçük vadeli mevduat (100 bin doların altı) + bireysel (retail) para piyasası fonları |
 **Dahil olmayan:** büyük vadeli mevduat (büyük CD'ler), hisseler, tahviller.
+**Tablo 2.1 · Para toplamları (Şubat 2019, milyar dolar)**
+| Kalem | Değer |
+| Halkın elindeki nakit | 1,633.7 |
+| + Vadesiz mevduat | 1,499.8 |
+| + Diğer çekle çekilebilir mevduat | 626.0 |
+| **= M1** | **3,759.4** |
+| + Küçük vadeli mevduat | 580.6 |
+| + Tasarruf mevduatı ve MMDA | 9,276.4 |
+| + Bireysel para piyasası fonları | 861.4 |
+| **= M2** | **14,477.8** |
+M2'nin en büyük kalemi tasarruf mevduatı; M2, M1'in yaklaşık 4 katı.
 :::ornek Rakamlar (2018 sonu)
 Nominal ABD GSYH'si 20.501 trilyon dolar. GSYH, M1'in yaklaşık **5.5 katı**, M2'den yaklaşık **%40 büyük**.
 :::
@@ -347,11 +362,13 @@ Nominal ABD GSYH'si 20.501 trilyon dolar. GSYH, M1'in yaklaşık **5.5 katı**, 
 Kitap eski tanımı kullanıyor. Fed Mayıs 2020'de tasarruf mevduatını M1'e aldı. Sınavda kitaptaki tanımla cevap ver.
 :::
 **Hangi M?** 1980'lerin başına kadar M1 kullanılıyordu. Hesap türleri değişince M2 daha yararlı hale geldi; M2 GSYH'nin neredeyse yarısı, M1 artık yararlı bir ölçü değil.
+@fig m23
 
 ## CARD M2 enflasyonu tahmin eder mi?
 Para hızla artarsa enflasyon yükselir. Şekil 2.4: enflasyon ile **iki yıl önceki** M2 büyümesi.
 • 1980'e kadar: **pozitif** ilişki.
 • 1990–2019: **neredeyse hiç** ilişki yok. M2 büyümesi enflasyonu tahmin etmek için yararlı olmaktan çıktı.
+@fig m24
 **Neden?** Belki ilişki sadece yüksek enflasyonda geçerli; belki sadece uzun dönemde görünüyor; belki yeni bir para ölçüsü lazım. Bildiğimiz: para yavaş büyüyorsa enflasyon muhtemelen düşük kalır.
 **TÜFE (CPI) enflasyonu nasıl hesaplanır?**
 • İnsanlara ne aldıklarını sor (sepeti belirle).
@@ -360,6 +377,12 @@ Para hızla artarsa enflasyon yükselir. Şekil 2.4: enflasyon ile **iki yıl ö
 :::ornek
 Sepet geçen yıl 500, bu yıl 520 dolar: $(520-500)/500 = 0.04$, yani enflasyon %4.
 :::
+**Tablo 2.2 · TÜFE nasıl hesaplanır (kitaptaki örnek)**
+| Yıl | Sepetin maliyeti | TÜFE (2020 = 100) | Enflasyon |
+| 2020 | 150 | 100 | – |
+| 2021 | 165 | 110 | $(110-100)/100 = \%10$ |
+| 2022 | 180 | 120 | $(120-110)/110 = \%9.1$ |
+TÜFE = bu yılki sepet maliyeti ÷ temel yıldaki maliyet × 100. Enflasyon = TÜFE'deki yüzde değişim.
 :::ipucu 100 dolarlık banknot tartışması
 Dolaşımda yaklaşık 1.6 trilyon dolar kâğıt para var, %80'i 100'lük banknotta (kişi başı 38 tane). Büyük banknot yasa dışı faaliyeti kolaylaştırır; basımı 13 sent tuttuğu için devlete kâr bırakır. Kaldırmak için bütün devletlerin anlaşması gerekir; kâğıt para özgürlüğü de korur.
 :::
@@ -370,12 +393,12 @@ TR: Aşağıdakilerden hangisi M2'de var ama M1'de yok?
 + Small-denomination time deposits
 - Currency in the hands of the public
 - Demand deposits
-- Traveler's checks
-HINT: M1 en likit olanlar: nakit, seyahat çeki, çekle çekilebilir mevduat. Hangisi vadeli?
+- Other checkable deposits
+HINT: M1 en likit olanlar: nakit ve çekle çekilebilir mevduat. Hangisi vadeli?
 EX: **Doğru cevap:** küçük vadeli mevduat.
 M2 = M1 + tasarruf mevduatı/MMDA + **küçük vadeli mevduat** + bireysel para piyasası fonları. Vadeli mevduat ödeme aracı değildir ama kolayca paraya çevrilir.
 **Diğer şıklar neden yanlış?**
-• Nakit, vadesiz mevduat, seyahat çeki: üçü de M1'in parçası (dolayısıyla M2'de de var, ama soru "M1'de değil" diyor).
+• Nakit, vadesiz mevduat, diğer çekle çekilebilir mevduat: üçü de M1'in parçası (dolayısıyla M2'de de var, ama soru "M1'de değil" diyor).
 
 ## Q
 EN: Which of the following is included in neither M1 nor M2?

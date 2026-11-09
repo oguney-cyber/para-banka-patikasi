@@ -25,6 +25,13 @@ En bilinenleri **Moody's** ve **Standard & Poor's**: ihraççıları izler ve bo
 • Teminatsız (unsecured): borçlu teminat göstermez.
 • **İskontolu** ihraç edilir (sıfır kuponlu gibi), vadesi **270 günden kısa**; çoğu 5–45 gün, sadece kısa vadeli finansman için.
 • Yaklaşık üçte biri para piyasası fonlarında. Neredeyse hepsi Moody's **P-1 ya da P-2** notlu (P = prime). Spekülatif ticari senet vardır ama öyle ihraç edildiği için değil, sonradan not düştüğü için.
+**Tablo 7.2 · Ticari senet notları**
+| Moody's | S&P | Anlamı |
+| P-1 | A-1+, A-1 | zamanında geri ödeme ihtimali güçlü (prime) |
+| P-2 | A-2 | güvenlik derecesi tatmin edici |
+| P-3 | A-3 | güvenlik derecesi yeterli |
+| – | B, C | spekülatif, prime altı |
+| – | D | temerrüt |
 ==Subprime konut kredisi==: geleneksel (prime) kredinin kredi değerliliği standartlarını karşılamayan kredi. Standartlar kredi tutarını, ev fiyatını ve ikisinin oranını (==LTV, loan-to-value==) kapsar. Subprime krediler genelde ==değişken faizliydi (ARM)==: ilk birkaç yıl düşük "teaser" faiz, sonra yüksek faiz. Zirvede bütün konut kredilerinin %15'inden azdı ama 2007–2009 krizini tetiklemeye yardım etti, çünkü bazı büyük, yüksek kaldıraçlı kurumlar bunlara dayalı çok miktarda ipotek kâğıdı tutuyordu.
 :::dikkat Derecelendirme kuruluşlarının sorunu
 Kuruluşların ipotek kâğıtlarına verdiği çok yüksek notlar krizde merkezi rol oynadı. Sorun "**ihraççı öder**" düzeniydi (çıkar çatışması, teşvik sorunu). SEC iki düzenleme getirdi: çıkar çatışmasını sınırlayan kontroller ve notlanan havuzlar hakkında bilgi yayımlama (şeffaflık).
@@ -35,6 +42,7 @@ Not ne kadar düşükse temerrüt riski o kadar yüksek, **fiyat o kadar düşü
 $$\text{Tahvil getirisi} = \text{ABD Hazine getirisi} + \text{temerrüt risk primi}$$
 • Notlar riski doğru yansıtıyorsa not düştükçe prim yükselir.
 • Hazine getirileri hareket edince diğer bütün getiriler de onlarla hareket eder (Şekil 7.2: faizin risk yapısı). Aaa ve Baa getirilerindeki hareketin çoğu Hazine getirisindeki değişimden gelir.
+@fig riskstr
 • 1979–2016: 10 yıllık Hazine getirisi ortalamada Aaa'dan yaklaşık **1 puan**, Baa'dan yaklaşık **2 puan** düşüktü.
 :::ornek Not indirimi pahalıdır
 Getiri %4'ten %6'ya çıkarsa 10 yıl sonraki 100 doların bugünkü değeri $100/1.04^{10} = 67.56$'dan $100/1.06^{10} = 55.84$'e düşer: **11.72 dolar**, yaklaşık **%17**.
@@ -243,6 +251,8 @@ Aynı temerrüt riski ve vergi durumundaki ama vadeleri farklı tahvillerin geti
 • Farklı vadelerin faizleri **birlikte hareket eder**.
 • Kısa vadeli getiriler uzun vadelilerden **daha oynaktır**.
 • Uzun vadeli getiriler genelde kısa vadelilerden **daha yüksektir**.
+@fig termstr
+@fig yc
 İyi bir teori üçünü de açıklamalı.
 
 ## CARD Beklentiler hipotezi
@@ -253,6 +263,7 @@ Aynı temerrüt riski ve vergi durumundaki ama vadeleri farklı tahvillerin geti
 $$(1 + i_{2t})(1 + i_{2t}) = (1 + i_{1t})(1 + i^e_{1t+1})$$
 Yaklaşık olarak 2 yıllık faiz, bugünkü 1 yıllık faiz ile 1 yıl sonra beklenen 1 yıllık faizin **ortalaması**:
 $$i_{2t} \approx \frac{i_{1t} + i^e_{1t+1}}{2}\qquad\qquad i_{nt} = \frac{i_{1t} + i^e_{1t+1} + \dots + i^e_{1t+n-1}}{n}$$
+@fig ehtime
 :::ornek
 Bugün 1 yıllık %2, gelecek yıl %4 bekleniyor: 2 yıllık faiz $(2+4)/2 = \%3$. Ters soru: 1 yıllık %2, 2 yıllık %3 ise beklenen gelecek yıl faizi $2\times3 - 2 = \%4$.
 :::
@@ -261,6 +272,7 @@ Bugün 1 yıllık %2, gelecek yıl %4 bekleniyor: 2 yıllık faiz $(2+4)/2 = \%3
 | faizler yükselecek | yukarı eğimli |
 | faizler düşecek | aşağı eğimli |
 | aynı kalacak | düz |
+@fig ycshapes
 
 ## CARD Beklentiler hipotezi neyi açıklar, neyi açıklayamaz?
 | Gözlem | Açıklıyor mu? |
@@ -364,16 +376,19 @@ Yatırımcılar uzun vadeli tahvilin ek riski için **telafi** ister. Getirinin 
 • risk primi: enflasyon ve faiz riskinin karşılığı.
 $$i_{nt} = \frac{i_{1t} + i^e_{1t+1} + \dots + i^e_{1t+n-1}}{n} + rp_n$$
 Bu ==likidite primi teorisi (liquidity premium theory)==; prim $rp_n$ vadeyle **artar**. Faizlerin aynı kalması beklense bile eğri hafif yukarı eğimlidir. Üç gözlemi birden açıklar.
+@fig lpt
 :::ornek
 1 yıllık faiz %2, gelecek yıl %2 bekleniyor, 2 yıllık prim 0.5 puan: $i_2 = (2+2)/2 + 0.5 = \%2.5$. Beklentiler hipotezi %2 derdi.
 :::
 
 ## CARD Faiz yapısındaki bilgi
 **Risk yapısı:** Yaklaşan resesyonun ilk etkisi özel tahvillerde risk primini artırmaktır. Devlet tahvilini tutmanın riski değişmez; yüksek notlu şirketlerde etki küçüktür; **ilk notu ne kadar düşükse** koşullar kötüleşince temerrüt primi o kadar yükselir. Şekil 7.6: Baa − Hazine farkı (risk spread) yükselince üretim düşer.
+@fig spreadgdp
 ==Güvenli limana kaçış (flight to quality)==: krizde insanlar riskli yatırımları satıp güvenli olanları alır. Devlet tahviline talep artarken neredeyse her şeye talep azalır; **risk farkı açılır**.
 **Vade yapısı:** Getiri eğrisinin eğimi genel ekonomik koşulları tahmin etmeye yardım eder.
 • Eğri genelde yukarı eğimlidir. Nadiren kısa faizler uzun faizleri aşar: ==ters getiri eğrisi (inverted yield curve)==. Genel bir **yavaşlamayı** öngörür; para politikasının sıkı olduğunu, politika yapıcıların büyümeyi ve enflasyonu yavaşlatmaya çalıştığını gösterir.
 • Şekil 7.7: ==vade farkı (term spread)== = 10 yıllık getiri − kısa vadeli (3 aylık) getiri. Vade farkı düşünce **bir yıl sonra** GSYH büyümesi düşer.
+@fig termgdp
 :::dikkat 2007–2009 istisnası
 Getiri eğrisi bu resesyonun derinliğini ve süresini öngöremedi: 1 ve 2 yıllık faizler gecelik faizlerin uzun süreli çöküşünü tahmin etmedi. Bu kez **açılan risk farkı** ciddi bir daralmanın daha yararlı sinyaliydi.
 :::

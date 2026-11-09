@@ -59,19 +59,19 @@
           ['Yüzdeye çevir', `$${f(inf, 4)}\\times 100 = ${P(inf)}$`]) + `\n\nAynı sepeti almak için %${pc(inf)} daha fazla para gerekiyor. Enflasyon = paranın satın alma gücünün düşmesi.`
       };
     }
-    const cur = R(1500, 1800), tc = R(1, 3), dd = R(1400, 1800), oc = R(500, 800), sav = R(9000, 11000), small = R(300, 600), mmf = R(900, 1200), large = R(1500, 2000);
-    const M1 = cur + tc + dd + oc, M2 = M1 + sav + small + mmf, askM2 = Math.random() < 0.55;
-    const rows = [['Currency in the hands of the public', cur], ["Traveler's checks", tc], ['Demand deposits', dd], ['Other checkable deposits', oc], ['Savings deposits and money-market deposit accounts', sav], ['Small-denomination time deposits', small], ['Retail money-market mutual fund shares', mmf], ['Large-denomination time deposits', large]];
+    const cur = R(1500, 1800), dd = R(1400, 1800), oc = R(500, 800), sav = R(9000, 11000), small = R(300, 600), mmf = R(900, 1200), large = R(1500, 2000);
+    const M1 = cur + dd + oc, M2 = M1 + sav + small + mmf, askM2 = Math.random() < 0.55;
+    const rows = [['Currency in the hands of the public', cur], ['Demand deposits', dd], ['Other checkable deposits', oc], ['Savings deposits and money-market deposit accounts', sav], ['Small-denomination time deposits', small], ['Retail money-market mutual fund shares', mmf], ['Large-denomination time deposits', large]];
     const tbl = '\n| Item | Billions of dollars |\n' + rows.map(r => `| ${r[0]} | ${r[1]} |`).join('\n');
     return {
       en: `Using the data below and the textbook definitions, what is ${askM2 ? 'M2' : 'M1'} (in billions of dollars)?` + tbl,
       tr: `Tablodaki verilerle ve kitaptaki tanımlarla ${askM2 ? 'M2' : 'M1'} kaç milyar dolardır?`,
-      opts: askM2 ? nopts(M2, [M2 + large, M1, sav + small + mmf, M2 - tc], 0) : nopts(M1, [M1 + sav, cur + dd, M1 + small, cur], 0),
+      opts: askM2 ? nopts(M2, [M2 + large, M1, sav + small + mmf, M2 - oc], 0) : nopts(M1, [M1 + sav, cur + dd, M1 + small, cur], 0),
       ex: steps(
-        ['M1 = en likit varlıklar', `M1 = dolaşımdaki nakit + seyahat çekleri + vadesiz mevduat + diğer çekle çekilebilir mevduat\n$${cur} + ${tc} + ${dd} + ${oc} = ${M1}$`],
+        ['M1 = en likit varlıklar', `M1 = dolaşımdaki nakit + vadesiz mevduat + diğer çekle çekilebilir mevduat\n$${cur} + ${dd} + ${oc} = ${M1}$`],
         askM2 && ['M2 = M1 + ödeme aracı olarak kullanılmayan ama kolay paraya çevrilen varlıklar', `M2 = M1 + tasarruf mevduatı ve MMDA + küçük vadeli mevduat + bireysel para piyasası fonları\n$${M1} + ${sav} + ${small} + ${mmf} = ${M2}$`],
         ['Dışarıda kalanı not et', `Büyük vadeli mevduat (${large}) M1'e de M2'ye de girmez. Büyük, pazarlığa açık mevduat sertifikalarıdır; likiditesi düşüktür.`])
-        + `\n\n**Cevap:** ${askM2 ? 'M2' : 'M1'} = ${askM2 ? M2 : M1} milyar dolar. (Kitaptaki tanım; Fed 2020'de tasarruf mevduatını M1'e aldı.)`
+        + `\n\n**Cevap:** ${askM2 ? 'M2' : 'M1'} = ${askM2 ? M2 : M1} milyar dolar. (Kitaptaki Tablo 2.1 tanımı; Fed 2020'de tasarruf mevduatını M1'e aldı.)`
     };
   };
 
@@ -415,7 +415,7 @@
         ex: steps(['Olası sonuçları yaz', `Bağımsız oldukları için 4 eşit olasılıklı durum var:\n| Durum | Olasılık | Toplam getiri |\n| ikisi de iyi | 0.25 | ${hi} |\n| biri iyi biri kötü | 0.50 | ${m2(mid)} |\n| ikisi de kötü | 0.25 | ${lo} |`],
           ['Beklenen değer', `$0.25\\times${hi} + 0.5\\times${m2(mid)} + 0.25\\times${lo} = ${m2(mid)}$`],
           ['Varyans', `$0.25\\times(${m2(hi - mid)})^2 + 0.5\\times 0 + 0.25\\times(${m2(lo - mid)})^2 = ${m2(sd2 * sd2)}$`],
-          ['Standart sapma', `$\\sqrt{${m2(sd2 * sd2)}} = ${m2(sd2)}$`]) + `\n\nTek yatırımda sd ${m2(sd1)} idi. Riski yaymak beklenen getiriyi değiştirmeden sd'yi $1/\\sqrt 2$ katına indirdi (kitaptaki GE–Microsoft örneği: 350 → 247.49).`
+          ['Standart sapma', `$\\sqrt{${m2(sd2 * sd2)}} = ${m2(sd2)}$`]) + `\n\nTek yatırımda sd ${m2(sd1)} idi. Riski yaymak beklenen getiriyi değiştirmeden sd'yi $1/\\sqrt 2$ katına indirdi (kitaptaki 3M–Microsoft örneğinde sd 10'dan 7.07'ye iner).`
       };
     }
     const s = R(10, 40) / 100, n = pick([2, 4, 9, 16, 25, 100]), sp = s / Math.sqrt(n);
@@ -699,7 +699,7 @@
       };
     }
     if (v === 1) {
-      const e1 = i1 + RF(-0.01, 0.02, 0.005), e2 = e1 + RF(-0.01, 0.02, 0.005), i3 = (i1 + e1 + e2) / 3;
+      const e1 = Math.max(0.0025, i1 + RF(-0.01, 0.02, 0.005)), e2 = Math.max(0.0025, e1 + RF(-0.01, 0.02, 0.005)), i3 = (i1 + e1 + e2) / 3;
       return {
         en: `Current and expected future one-year rates are ${pc(i1, 1)}% (this year), ${pc(e1, 1)}% (next year) and ${pc(e2, 1)}% (the year after). Under the expectations hypothesis, what is the three-year interest rate?`,
         tr: `1 yıllık faizler: bu yıl %${pc(i1, 1)}, gelecek yıl %${pc(e1, 1)}, sonraki yıl %${pc(e2, 1)} bekleniyor. Beklentiler hipotezine göre 3 yıllık faiz kaçtır?`,
@@ -873,7 +873,7 @@
   const has = (q, re) => re.test(q.en);
   const G = {
     cpiInfl: (q) => has(q, /M1|M2/) ? ({
-      how: T`M1 = nakit + seyahat çekleri + vadesiz mevduat + diğer çekle çekilebilir mevduat. M2 = M1 + tasarruf mevduatı ve MMDA + küçük vadeli mevduat + bireysel para piyasası fonları. Büyük vadeli mevduat ikisine de girmez.`,
+      how: T`M1 = nakit + vadesiz mevduat + diğer çekle çekilebilir mevduat. M2 = M1 + tasarruf mevduatı ve MMDA + küçük vadeli mevduat + bireysel para piyasası fonları. Büyük vadeli mevduat ikisine de girmez.`,
       traps: [T`M2'yi hesaplarken M1'i eklemeyi unutmak.`, T`Büyük vadeli mevduatı M2'ye katmak.`, T`Tasarruf mevduatını M1'e katmak (kitaptaki tanımda M2'de).`]
     }) : ({
       how: T`Enflasyon = (yeni fiyat − eski fiyat) ÷ eski fiyat. Paydada her zaman başlangıç değeri.`,

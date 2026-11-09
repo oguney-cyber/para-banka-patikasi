@@ -77,10 +77,15 @@
     const lines = (src || '').replace(/\r/g, '').split('\n');
     const out = [];
     let i = 0;
-    const special = (l) => l.startsWith('~~~') || l.startsWith(':::') || l.startsWith('|') || l.startsWith('• ') || /^\d+\.\s/.test(l) || /^\s*\$\$.*\$\$\s*$/.test(l);
+    const special = (l) => l.startsWith('@fig ') || l.startsWith('~~~') || l.startsWith(':::') || l.startsWith('|') || l.startsWith('• ') || /^\d+\.\s/.test(l) || /^\s*\$\$.*\$\$\s*$/.test(l);
     while (i < lines.length) {
       const l = lines[i];
       if (l.trim() === '') { i++; continue; }
+      if (l.startsWith('@fig ')) {   // şekil: js/figs.js
+        const F = (typeof window !== 'undefined' ? window : globalThis).FIGS || {}, f = F[l.slice(5).trim()];
+        if (f) out.push(`<figure class="fig"><div class="fig-art" role="img" aria-label="${esc(f.t)}">${f.svg}</div><figcaption><b>${inline(f.t)}</b>${f.n ? '<br>' + inline(f.n) : ''}</figcaption></figure>`);
+        i++; continue;
+      }
       if (l.startsWith('~~~')) {
         const buf = []; i++;
         while (i < lines.length && !lines[i].startsWith('~~~')) buf.push(lines[i++]);

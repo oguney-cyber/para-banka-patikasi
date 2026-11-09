@@ -15,6 +15,28 @@ $$\text{Toplam varlıklar} = \text{toplam yükümlülükler} + \text{banka serma
 • Bankalar fonlarını mevduat sahiplerinden ve işletmelerden, ayrıca piyasalarda başka kurumlardan borçlanarak toplar.
 • Varlıklar ile yükümlülükler arasındaki fark ==banka sermayesi (net worth)==: bankanın sahipleri için değeri.
 • Kâr iki kaynaktan gelir: **hizmet ücretleri** ve yükümlülüklere ödenen ile varlıklardan kazanılan **faiz farkı**.
+**Tablo 12.1 · ABD ticari bankalarının bilançosu (Aralık 2018, milyar dolar)**
+| Varlıklar | Tutar | Payı |
+| Nakit kalemleri | 1,950 | %11.5 |
+| Menkul kıymetler | 3,499 | %20.6 |
+| · devlet ve kurum kâğıtları | 2,672 | %15.7 |
+| · diğer menkul kıymetler | 827 | %4.9 |
+| Krediler | 9,578 | %56.3 |
+| · ticari ve sanayi | 2,314 | %13.6 |
+| · gayrimenkul | 4,413 | %25.9 |
+| · tüketici | 1,494 | %8.8 |
+| · bankalar arası | 15 | %0.1 |
+| · diğer | 1,342 | %7.9 |
+| Diğer varlıklar | 1,994 | %11.7 |
+| **Toplam varlık** | **17,021** | |
+
+| Yükümlülükler ve sermaye | Tutar | Payı |
+| Mevduat | 12,425 | yükümlülüklerin %82.3'ü |
+| · büyük vadeli mevduat | 1,699 | %11.3 |
+| Borçlanma | 1,945 | %12.9 |
+| Diğer yükümlülükler | 730 | %4.8 |
+| **Toplam yükümlülük** | **15,100** | |
+| **Banka sermayesi** = 17,021 − 15,100 | **1,921** | varlıkların %11.3'ü |
 
 ## CARD Varlıklar: fonların kullanımı
 Varlık tarafı bankanın topladığı fonlarla ne yaptığını gösterir. Dört grup: **nakit, menkul kıymetler, krediler, diğer.**
@@ -32,6 +54,7 @@ Aralık 2018'de bankalar varlıklarının **%11'inden fazlasını** nakit tutuyo
 | Bankalar arası | diğer bankalara verilen krediler |
 | Diğer | menkul kıymet alımı için krediler vb. |
 Kredi türlerinin likiditesi farklıdır. Mevduat kurumları kredi portföyleriyle ayrılır: ticari bankalar esas olarak **işletmelere**, S&L'ler bireylere **konut kredisi**, kredi kooperatifleri **tüketici kredisi** verir. Kriz öncesinde ticari bankalar gayrimenkule daha çok girdi (ticari senet piyasası büyük firmalara alternatif sundu; ipotek kâğıtları bankaların kredilerini satmasını sağladı); krizden sonra gayrimenkul payını azalttılar.
+@fig bankassets
 
 ## Q
 EN: The bank balance sheet identity is:
@@ -130,6 +153,8 @@ FX: Sermaye = varlık − yükümlülük :: kayıplara karşı tampon; kredi zar
 • **Diğer bankalardan:** fazla rezervi olan bankalar ihtiyacı olanlara ==federal fon piyasasında (fed funds market)== borç verir. Bu krediler **teminatsızdır**: borç veren banka borç alana güvenmeli.
 • Yabancı bankalardan ve devlet destekli kuruluşlardan borçlanma.
 • ==Geri alım anlaşması (repo)==: menkul kıymetin nakit karşılığında verildiği kısa vadeli **teminatlı** borç; taraflar işlemi belirli bir tarihte (genelde ertesi gün) tersine çevirmeyi kabul eder.
+@fig repo
+@fig bankliab
 :::dikkat Repo ve kriz
 2007'de repo hacmi ticari bankacılık sisteminin toplam yükümlülüklerinin neredeyse yarısıydı. 2008'de repo piyasası ciddi şekilde daraldı ve krizi derinleştirdi. Reformlar yeni repo kredilerinin açılması ile vadesi gelenlerin kapanmasını eşzamanlı yapmayı hedefliyor; böylece takas bankalarının gün içinde aldığı risk azalır.
 :::
@@ -352,6 +377,15 @@ Banka her iş kolundan kâr etmek ister: mevduata kredilerden ve menkul kıymetl
 • Yükümlülük tarafı: mevduat çekilişi.
 • Varlık tarafı: kredi limitlerinin kullanılması.
 Net değeri pozitif olsa bile **likit olmayan banka batabilir**.
+**Şekil 12.4–12.7 · 5 milyon dolarlık mevduat çekilişi ve dört çözüm (milyon dolar)**
+| Durum | Rezerv | Kredi | Menkul | Mevduat | Borç | Sermaye |
+| Başlangıç | 10 | 100 | 40 | 100 | 30 | 20 |
+| 5 milyon çekildi | 5 | 100 | 40 | 95 | 30 | 20 |
+| Çözüm: menkul kıymet sat | 10 | 100 | 35 | 95 | 30 | 20 |
+| Çözüm: kredileri azalt | 10 | 95 | 40 | 95 | 30 | 20 |
+| Çözüm: borçlan | 10 | 100 | 40 | 95 | 35 | 20 |
+| Çözüm: yeni mevduat çek | 10 | 100 | 40 | 100 | 30 | 20 |
+İlk ikisi varlık yönetimi (bilanço küçülür), son ikisi yükümlülük yönetimi (bilanço aynı kalır).
 **Yönetim:**
 • Eski yöntem: ==fazla rezerv== tutmak. Pasif ve pahalı (kredilerden ve menkul kıymetlerden kazanılacak faizden vazgeçilir).
 • **Varlık yönetimi:** menkul kıymet satmak (en kolayı: çoğu hazine kâğıdı); kredileri başka bankalara satmak; vadesi gelen krediyi yenilememek (müşteri kaybı, kârlılık düşer).
@@ -368,9 +402,15 @@ Bankanın **yükümlülükleri kısa, varlıkları uzun vadeli**. Bu uyumsuzluk 
 ==Faize duyarlı (interest-rate sensitive)==: faiz değişince getirdiği gelirin de değiştiği kalem. Kâr için yükümlülüklerin faizi varlıklarınkinden düşük olmalı (net faiz marjı). **Yükümlülükler varlıklardan daha duyarlıysa faiz artışı kârı keser.**
 ==Gap analizi==: her 1 puanlık faiz değişiminin kârı ne kadar değiştireceğini tahmin etmek.
 $$\Delta\text{kâr} = (\text{faize duyarlı varlıklar} - \text{faize duyarlı yükümlülükler})\times\Delta i$$
-:::ornek Kitap
-Faize duyarlı varlıklar 20 milyon, faize duyarlı yükümlülükler 50 milyon. Faiz 1 puan artarsa: gelir $+0.2$, gider $+0.5$; kâr $(20 - 50)\times0.01 = -0.3$ milyon dolar.
-:::
+**Tablo 12.2 · Faiz oranı riski örneği (100 dolarlık varlık başına)**
+| | Varlıklar | Yükümlülükler |
+| Faize duyarlı | 20 | 50 |
+| Faize duyarsız | 80 | 50 |
+| İlk faiz | %5 | %3 |
+| Faiz 1 puan artınca (duyarlılarda) | %6 | %4 |
+| Gelir / gider, önce | $0.05(20) + 0.05(80) = 5.00$ | $0.03(50) + 0.03(50) = 3.00$ |
+| Gelir / gider, sonra | $0.06(20) + 0.05(80) = 5.20$ | $0.04(50) + 0.03(50) = 3.50$ |
+Kâr önce $5.00 - 3.00 = 2.00$, sonra $5.20 - 3.50 = 1.70$: **0.30 düştü**. Gap analiziyle tek satırda: $(20 - 50)\times0.01 = -0.30$.
 **Yönetim:** varlık ve yükümlülüklerin faiz duyarlılığını eşleştirmek (faiz riskini azaltır ama **kredi riskini artırır**: örneğin değişken faizli kredi borçluya riski aktarır, borçlu ödeyemeyebilir) ya da türev, özellikle ==faiz swapları== kullanmak. Vade farkları hesaba katılarak analiz geliştirilebilir ama karmaşıklaşır.
 
 ## CARD Alım-satım riski ve diğer riskler
@@ -382,6 +422,14 @@ Faize duyarlı varlıklar 20 milyon, faize duyarlı yükümlülükler 50 milyon.
 | ==Siber risk== | bilgi teknolojisi sistemlerinin çökmesi ya da ele geçirilmesi | (finans sektörü büyük veri tabanları yüzünden hedef) |
 | ==Kur riski== | varlıklar bir para biriminde, yükümlülükler başkasında | aynı para biriminde mevduat toplamak; döviz vadeli ve swap ile hedge |
 | ==Ülke (sovereign) riski== | yabancı borçlunun hükümeti ödemeyi yasaklar (krizde dolar ödemelerini kısıtlar) | çeşitlendirme, bazı ülkelere kredi vermemek, türevle hedge |
+
+**Tablo 12.3 · Bankanın riskleri ve önlemler (özet)**
+| Risk | Kaynağı | Önerilen önlem |
+| Likidite | mevduat çekilişi, kredi limitlerinin kullanılması | yeterli nakit rezerv; varlık yönetimi (menkul kıymet ya da kredi sat, bilanço küçülür); yükümlülük yönetimi (mevduat çek, bilanço aynı kalır) |
+| Kredi | borçluların temerrüdü | çeşitlendir; istatistiksel modellerle tara; ahlaki tehlikeye karşı izle |
+| Faiz oranı | vade uyumsuzluğu + faiz değişimi | iki tarafın vadesini eşleştir; faiz swapı gibi türevler |
+| Alım-satım (piyasa) | bankanın kendi hesabındaki zararlar | işlemcileri VaR gibi araçlarla yakından izle |
+| Operasyonel | yetersiz süreç, insan, sistem | yedekli sistemler; devlet kötü niyetli tehditleri ortaya çıkarıp sınırlamaya yardım eder |
 
 ## Q
 EN: Liquidity risk for a bank is:

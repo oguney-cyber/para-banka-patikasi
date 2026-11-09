@@ -151,6 +151,7 @@ $$P = \frac{C}{1+i} + \dots + \frac{C}{(1+i)^n} + \frac{F}{(1+i)^n}$$
 | $P = 100$ (nominal) | YTM = kupon oranı |
 | $P > 100$ | YTM < kupon oranı |
 | $P < 100$ | YTM > kupon oranı |
+@fig priceytm
 **Fiyat ↑ ⇒ YTM ↓.** Mantığı: 100 nominalli tahvile 95 ödersen hem kuponları hem de değerin 95'ten 100'e yükselişini alırsın. Bu yükseliş ==sermaye kazancı (capital gain)==, getirinin parçasıdır. Fiyat nominalden yüksekse tahvil sahibi ==sermaye kaybı (capital loss)== yaşar.
 
 ## CARD Cari getiri
@@ -303,6 +304,7 @@ Tahvil fiyatlarını (ve getirilerini) arz ve talep belirler. Basitleştirmeler:
 • ==Tahvil arz eğrisi==: fiyat ile satılmak istenen miktar ilişkisi. Fiyat yüksekse borçlanmak ucuz, daha çok tahvil arz edilir: **yukarı eğimli**.
 • ==Tahvil talep eğrisi==: fiyat ile yatırımcıların talep ettiği miktar ilişkisi. Fiyat yükseldikçe getiri düşer, talep azalır: **aşağı eğimli**.
 • ==Denge==: arz = talep.
+@fig bondeq
 **Dengeye dönüş:**
 • Fiyat dengenin **üstünde**: arz edilen > talep edilen (arz fazlası). Satıcılar fiyatı düşürür.
 • Fiyat dengenin **altında**: talep fazlası. Alıcılar fiyatı yükseltir.
@@ -316,6 +318,7 @@ Fiyat değişince eğri **üzerinde** hareket edilir (arz/talep edilen miktar de
 | Devlet borçlanma ihtiyacı ↑ | sağa (daha çok tahvil) |
 | İş koşulları iyileşir (yatırım fırsatı ↑) | sağa |
 | Beklenen enflasyon ↑ (borçlanmanın reel maliyeti ↓) | sağa |
+@fig supshift
 **Talebi kaydıranlar:**
 | Değişim | Talep |
 | Servet ↑ | sağa |
@@ -324,6 +327,7 @@ Fiyat değişince eğri **üzerinde** hareket edilir (arz/talep edilen miktar de
 | Faizlerin düşmesi beklenir (fiyat ↑ beklenir) | sağa |
 | Tahvil alternatiflere göre daha az riskli | sağa |
 | Tahvil alternatiflere göre daha likit | sağa |
+@fig demshift
 **Kural:** arz sağa ⇒ fiyat ↓, faiz ↑. Talep sağa ⇒ fiyat ↑, faiz ↓.
 
 ## CARD İki örnek: enflasyon ve resesyon
@@ -331,10 +335,12 @@ Fiyat değişince eğri **üzerinde** hareket edilir (arz/talep edilen miktar de
 • Borçlanmanın reel maliyeti düşer → **arz sağa**.
 • Borç vermenin reel getirisi düşer → **talep sola**.
 • İki etki aynı yönde: **fiyat düşer, faiz yükselir.** Miktar belirsiz.
+@fig inflshift
 **Resesyon (konjonktür daralması):**
 • Yatırım fırsatları azalır → **arz sola**.
 • Servet azalır → **talep sola**.
 • Grafikte fiyat belirsiz görünür ama veriler net: resesyonda **faizler düşer**, yani fiyatlar yükselir. Demek ki arz talepten daha çok kayıyor.
+@fig recshift
 :::ornek 1998 güvenli liman
 Rusya 1998'de temerrüde düştü, yatırımcılar gelişmekte olan ülkelere güvenini kaybetti. En güvenli varlık ABD hazine tahvilleri: talep arttı, fiyat yükseldi, getiri düştü.
 :::

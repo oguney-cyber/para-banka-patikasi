@@ -18,6 +18,7 @@ Makale (The Economist, 8 Ekim 2026): 2010'larda ekonomistler faizlerin sonsuza k
 | Haziran sonundan beri İtalya 10 yıllık | yaklaşık +1 puan |
 Makalenin hatırlattığı kural: **"yields rise when prices fall"**, getiriler fiyatlar düşünce yükselir (Bölüm 4 ve 6). Devlet tahvillerindeki ==satış dalgası (sell-off)== yani fiyat düşüşü, getirilerin yükselmesi demektir. Yüksek borçlanma maliyeti rekor düzeydeki borçla çarpışıyor: devlet ne kadar çok borçluysa yüksek faiz o kadar acıtır.
 **Üç neden, üç farklı tehlike düzeyi:** yüksek enerji fiyatları enflasyonu artırıp merkez bankalarını faizi yüksek tutmaya zorluyor; ABD'de güçlü büyüme ve yapay zekâ yatırımları sermayeye dev talep yaratıyor; bazı ülkelerde mali bozulma ve popülist siyaset yatırımcıyı devlet borcundan ürkütüyor. **En çok risk altındakiler: büyümesi zayıf, borcu yüksek ülkeler.**
+@fig yieldprice
 
 ## CARD Yapay zekâ ve sermaye talebi
 • ABD ekonomisi beklenenden güçlü: özel yurt içi talep 2. çeyrekte yıllık %4.6 büyüdü; Atlanta Fed 3. çeyrek için %3.7 büyüme öngörüyor. 23 Eylül'de satın alma yöneticileri endeksi (PMI) Temmuz 2021'den beri en hızlı genişlemeyi gösterdi; 10 yıllık getiri bir günde 0.15 puan, yılın en büyük günlük artışıyla yükseldi: piyasa Fed'in faizi "daha uzun süre daha yüksek" tutacağını fiyatladı.
@@ -161,6 +162,7 @@ $$\Delta(\text{borç/GSYH}) \approx (r - g)\times\frac{\text{borç}}{\text{GSYH}
 | ABD | büyüme güçlü, yapay zekâ verimliliği artırırsa daha da iyi |
 | Fransa | 2. çeyrekte borçlanma maliyeti nominal GSYH büyümesinden yaklaşık **2 puan** yüksek (zengin dünyadaki en geniş fark); faiz dışı **açık** GSYH'nin %2.9'u |
 | İtalya | benzer olumsuz fark, daha çok borç, ama zaten faiz dışı **fazla** veriyor |
+@fig debtpath
 :::ornek Fransa hesabı
 Bütün borç bugünkü 5 yıllık getiriyle yeniden finanse edilse, borcun ekonomiden hızlı büyümesini durdurmak için GSYH'nin yaklaşık **%1.8**'i kadar faiz dışı fazla gerekir. Fransa 2000'lerin başından beri bu büyüklükte faiz dışı fazla vermedi. Kabaca: $(r - g)\times d \approx 1.5\text{ puan}\times1.2 = 1.8$.
 :::

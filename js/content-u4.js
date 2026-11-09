@@ -181,6 +181,7 @@ Bugünkü değer **daha yüksektir**:
 • ödemeye kadarki süre ($n$) **kısaysa**,
 • faiz ($i$) **düşükse**.
 Ödemeyi ikiye katlamak (süre ve faiz sabit) bugünkü değeri ikiye katlar. Ödeme ne kadar erken yapılırsa o kadar değerlidir.
+@fig pv
 | Vade | %1 | %5 | %10 | %15 |
 | 1 yıl | 99.01 | 95.24 | 90.91 | 86.96 |
 | 5 yıl | 95.15 | 78.35 | 62.09 | 49.72 |
@@ -315,6 +316,7 @@ En yaygın tür ==kuponlu tahvil (coupon bond)==:
 Adı eskiden tahvil sertifikasına iliştirilen tarihli kuponlardan gelir.
 **Tahvilin değeri** = kuponların bugünkü değeri + anaparanın bugünkü değeri:
 $$P_{CB} = \frac{C}{1+i} + \frac{C}{(1+i)^2} + \dots + \frac{C}{(1+i)^n} + \frac{F}{(1+i)^n}$$
+@fig cbond
 • Anaparanın değeri $F/(1+i)^n$: vade ($n$) uzadıkça düşer.
 • Kuponlar kredi taksitlerine benzer: ne kadar uzun sürerse toplam değeri o kadar yüksek; faiz yükseldikçe bugünkü değeri düşer.
 • Fiyat yükselir: kupon ($C$) artarsa ya da faiz ($i$) düşerse.
@@ -438,7 +440,9 @@ Borç veren %3 reel getiri istiyor, %2 enflasyon bekliyor: nominal faiz $3 + 2 =
 Piyasalar **nominal** faiz kote eder; "faiz" denince nominal faiz kastedilir. Reel faizi doğrudan **gözlemleyemeyiz**, tahmin etmemiz gerekir:
 $$r = i - \pi^e$$
 • Şekil 4.2: nominal faiz, enflasyon ve reel faiz zaman içinde birlikte hareket eder; reel faiz zaman zaman **negatif** olur.
+@fig nomreal
 • 2016 başında 50 ülke ve euro bölgesi: enflasyonu yüksek ülkelerin nominal faizi de yüksek.
+@fig countries
 :::dikkat Beklenen ve gerçekleşen
 Sözleşme anında $\pi^e$ (beklenen) kullanılır. Sonradan enflasyon beklenenden **yüksek** çıkarsa gerçekleşen reel faiz düşer: **borç veren kaybeder, borçlu kazanır.** Düşük çıkarsa tersi.
 :::

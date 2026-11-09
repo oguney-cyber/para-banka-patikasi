@@ -13,6 +13,7 @@ FX: Kaldıraç oranı = varlık / özsermaye :: borçla finanse etme; kayıplar�
 • ==Dolaylı finansman (indirect finance)==: borç veren ile borçlu arasında bir **kurum** vardır. Araba almak için bankadan ya da finansman şirketinden kredi almak.
 • ==Varlık (asset)==: sahip olduğun değerli şey. ==Yükümlülük (liability)==: borçlu olduğun şey.
 Finansal gelişme ekonomik büyümeyle bağlantılıdır: sistemin rolü üretimi, istihdamı ve tüketimi kolaylaştırmak, kaynakları en verimli kullanıma yönlendirmektir (Şekil 3.1: fonların sistemden akışı).
+@fig flow
 
 ## CARD Finansal araç nedir, ne işe yarar?
 ==Finansal araç (financial instrument)==: bir tarafın diğerine gelecekte, belirli koşullar altında değerli bir şey (genelde para) aktarmasını gerektiren **yazılı yasal yükümlülük**. Önemli olan yükümlülüğün **uygulanabilir** olması.
@@ -330,6 +331,7 @@ FX: Gölge bankalar :: mevduat almayan, daha az düzenlenen, daha riskli ve az �
 • Standart menkul kıymet ihracında uzmanlaşarak ==işlem maliyetlerini== düşürmek.
 • Borçluları ==tarama (screening) ve izleme (monitoring)== bilgi maliyetini düşürmek. Böylece asimetrik bilgiyi azaltır, kaynakların en verimli kullanıma gitmesine yardım ederler.
 • Tasarrufçulara fonlarına ==kolay erişim== sağlamak.
+@fig flow2
 
 ## CARD Kurum türleri
 | Tür | Ne yapar? |

@@ -34,6 +34,7 @@ $E = \tfrac12(1400) + \tfrac12(700) = 1050$
 | **Toplam** | | **1050** |
 :::
 İkisinde de beklenen getiri 1000 dolarda 50 dolar, yani **%5**. Yüzde, farklı büyüklükteki yatırımları karşılaştırmayı sağlar. Ama iki yatırım aynı mı? **Hayır**: ikincinin sonuçları çok daha geniş bir aralığa yayılıyor. **Değişkenlik = risk.**
+@fig prob
 :::ipucu Emeklilik için yeterli biriktiriyor musun?
 1000 dolar 40 yıl %6 ile 160.000 dolardan fazla olur; %3 ile 80.000'den az. %6 beklenen getiri için risk almak gerekir ve getiri %3 çıkarsa fark çok büyük.
 :::
@@ -156,9 +157,16 @@ Konut kredisinde en kötü senaryo, taksiti ödeyemeyip evini kaybetmendir. Bekl
 ==Kaldıraç (leverage)==: bir yatırımın bir kısmını borçla finanse etmek. Beklenen getiriyi artırır ama **standart sapmayı da artırır**; fiyat değişimlerinin etkisini büyütür.
 $$\text{Kaldıraç oranı} = \frac{\text{yatırımın maliyeti}}{\text{sahibin satın almaya katkısı}}$$
 Borçla bir varlık alırsan (faizi ihmal edince) hem beklenen getiri hem standart sapma **kaldıraç oranıyla çarpılır**. Kaldıraç en kötü sonucu da ağırlaştırır.
-:::ornek
-1000 dolarlık yatırımın 500'ünü kendin koyup 500 borçlanırsan kaldıraç $1000/500 = 2$. Yatırımın beklenen getirisi %5, sd %35 ise kendi paranın beklenen getirisi %10, sd'si %70 olur. Varlık %50 düşerse kendi paranın tamamı gider.
-:::
+**Kitaptaki tablo: kaldıraç oranı 2**
+| | Kaldıraçsız | Kaldıraç 2 |
+| Kendi paran | 1000 | 1000 |
+| + Borç | 0 | 1000 |
+| = Toplam yatırım | 1000 | 2000 |
+| Olası getiriler | 1400 ya da 700 | 2800 ya da 1400 |
+| Borç ödendikten sonra | 1400 ya da 700 | 1800 ya da 400 |
+| Beklenen değer (net) | 1050 (%5) | 1100 (%10) |
+| Standart sapma | 350 (%35) | 700 (%70) |
+Beklenen getiri de standart sapma da ikiye katlandı. Kötü durumda kaldıraçsız yatırımcı 300 dolar (%30) kaybeder, kaldıraçlı yatırımcı 600 dolar (%60).
 :::dikkat Sistemik risk
 ==Sistemik risk==: tek bir hane, firma ya da piyasaya değil, **sistemin bütününe** yönelik tehdit. Ortak bir riske maruz kalmak birçok aracıyı aynı anda tehdit edebilir; sistemin, olmadan çalışamayacağı kritik parçaları olabilir; likidite akışının önündeki engeller sistem için felaket olabilir.
 :::
@@ -268,6 +276,7 @@ FX: Sistematik risk :: herkesi, bütün ekonomiyi etkiler
 **Riskten kaçınan yatırımcı**, aynı beklenen getirili iki yatırımdan **kesin** getirisi olanı, belirsiz olanına **her zaman** tercih eder.
 Bu yüzden yatırım ne kadar riskliyse ==risk primi (risk premium)== o kadar yüksektir: riskli varlığı tutması için yatırımcının istediği karşılık.
 $$\text{Risk primi} = \text{riskli varlığın beklenen getirisi} - \text{risksiz getiri}$$
+@fig riskret
 **Risk–getiri ödünleşimi (risk-return tradeoff):** daha yüksek beklenen getiri ancak daha yüksek risk alarak elde edilir.
 :::ipucu Ne kadar risk almalısın?
 Kendine sor: yatırımından bir ay sonra değer %20 düşerse ne yaparsın? "Ne kadarını kaybetmeyi göze alabilirim?" Zaman ufkun uzunsa (ve servetin büyükse) daha fazla risk taşıyabilirsin.
@@ -278,6 +287,7 @@ Bütün riskler iki gruba ayrılır:
 | Tür | İngilizce | Kimi etkiler? | Çeşitlendirmeyle? |
 | Firmaya/sektöre özgü | ==idiosyncratic (unique) risk== | az sayıda kişi/firma | **azaltılabilir** |
 | Sistematik | ==systematic (economy-wide) risk== | herkesi, bütün ekonomiyi | azaltılamaz |
+@fig idio
 Firmaya özgü riskin iki türü:
 • Bir sektör için kötü, öbürü için iyi olan risk: petrol fiyatı artışı otomobil sektörüne kötü, enerji sektörüne iyi.
 • Sadece bir kişiye ya da şirkete özgü risk: bir fabrikada yangın, yöneticinin istifası.
@@ -387,14 +397,15 @@ Yarı yarıya yatırınca getiri her durumda 110: **hedging riski tamamen yok et
 
 ## CARD Riski yaymak
 Her zaman hedge yapamayız; yatırımlar her zaman öngörülebilir biçimde zıt hareket etmez. Alternatif: getirileri **birbiriyle ilişkisiz** yatırımlar bulup riski yaymak.
-:::ornek 1000 doları yatırmanın üç yolu
-İki bağımsız hisse (GE ve Microsoft), her biri ½ olasılıkla 1400 ya da 700 öder.
+:::ornek Kitaptaki örnek (Tablo 5.7): 100 doları yatırmanın üç yolu
+3M ve Microsoft birbirinden bağımsız. 100 dolarlık yatırım her birinde ½ olasılıkla 120 ya da 100 eder.
 | Strateji | Olası getiriler | Beklenen | sd |
-| 1000 GE'ye | 1400 (½), 700 (½) | 1050 | 350 |
-| 1000 Microsoft'a | 1400 (½), 700 (½) | 1050 | 350 |
-| 500 + 500 | 1400 (¼), 1050 (½), 700 (¼) | 1050 | **247.49** |
-Yarı yarıya yatırınca "biri iyi biri kötü" durumu ortaya çıkar ve uçlar seyrekleşir; sd $350/\sqrt 2 = 247.49$'a düşer.
+| 100 3M'ye | 120 (½), 100 (½) | 110 | 10 |
+| 100 Microsoft'a | 120 (½), 100 (½) | 110 | 10 |
+| 50 + 50 | 120 (¼), 110 (½), 100 (¼) | 110 | **7.07** |
+Yarı yarıya yatırınca "biri iyi biri kötü" durumu (110) ortaya çıkar, uçlar seyrekleşir; sd $10/\sqrt 2 = 7.07$'ye düşer. (Slayttaki yazıda 1000 dolar ve GE geçiyor, tablo 3M ile 100 dolar kullanıyor; mantık aynı.)
 :::
+@fig spreadbars
 • Portföydeki **bağımsız** risk kaynağı arttıkça toplam risk düşer. Çok sayıda bağımsız risk eklenince standart sapma ihmal edilebilir hale gelir: $\sigma/\sqrt n$.
 • Riski yayarak çeşitlendirme **sigortacılığın temelidir**.
 :::dikkat

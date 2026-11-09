@@ -6,7 +6,7 @@ window.FORMULAS = String.raw`
 | Paranın 3 işlevi | ödeme aracı (en önemlisi) · hesap birimi · değer saklama |
 | Gelir / servet | gelir = zaman içinde akış · servet = varlıklar − yükümlülükler (stok) |
 | Likidite | bir varlığın ödeme aracına ne kadar kolay ve ucuz çevrildiği |
-| M1 | dolaşımdaki nakit + seyahat çekleri + vadesiz mevduat + diğer çekle çekilebilir mevduat |
+| M1 | dolaşımdaki nakit + vadesiz mevduat + diğer çekle çekilebilir mevduat |
 | M2 | M1 + tasarruf mevduatı (MMDA dahil) + küçük vadeli mevduat (100 bin dolar altı) + bireysel para piyasası fonları |
 | Enflasyon (TÜFE) | $\pi = \dfrac{\text{sepet}_{\text{yeni}} - \text{sepet}_{\text{eski}}}{\text{sepet}_{\text{eski}}}$ |
 | Kaldıraç oranı | $\dfrac{\text{yatırımın toplam tutarı}}{\text{sahibin koyduğu para}} = \dfrac{\text{varlık}}{\text{özsermaye}}$ |
