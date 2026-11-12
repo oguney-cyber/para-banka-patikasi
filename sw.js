@@ -1,7 +1,7 @@
 /* Çevrimdışı çalışma: uygulama dosyaları önbelleğe alınır. Sürüm değişince eski önbellek silinir.
    Aynı alan adında başka uygulamalar da var; yalnızca bu uygulamanın (pbp-) önbellekleri silinir. */
 const PREFIX = 'pbp-';
-const VERSION = PREFIX + '2026-11-10b';
+const VERSION = PREFIX + '2026-11-12a';
 const CORE = [
   './', 'index.html', 'styles.css', 'manifest.webmanifest',
   'js/stats.js', 'js/gen.js', 'js/parse.js', 'js/app.js', 'js/ink.js', 'js/calc.js', 'js/formulas.js', 'js/figs.js',

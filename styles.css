@@ -564,3 +564,7 @@ ol.steps, ul.steps { display: grid; gap: 8px; margin: 0; padding-left: 1.3em; co
 .fig .pt { fill: var(--surface); stroke: var(--ink); stroke-width: 2; }
 .fig .sh { fill: var(--warn); opacity: .14; }
 .fig .wd1 { fill: var(--pen-soft); stroke: var(--pen); stroke-width: 1.5; } .fig .wd2 { fill: var(--bad-soft); stroke: var(--bad); stroke-width: 1.5; }
+/* Telefonda geniş tablo ve uzun formüller sayfayı yana kaydırmasın; KaTeX'in gizli MathML katmanı kutunun içinde kalsın */
+.view > *, .panel > *, .prose > *, .p-inner > * { min-width: 0; }
+.tbl, .panel > p, .prose > p { position: relative; }
+.panel > p, .prose > p { overflow-x: auto; overflow-y: hidden; }
